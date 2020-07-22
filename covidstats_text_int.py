@@ -25,16 +25,16 @@ from twilio.rest import Client
 
 # Your Account Sid and Auth Token from twilio.com/console
 # DANGER! This is insecure. See http://twil.io/secure
-account_sid = 'ACb9f8f0ea5dca76a66929e9cafafebe00'
-auth_token = '83813f43547e94ab73ce84af5958a539'
+account_sid = 'insert account sid'
+auth_token = 'insert auth token'
 client = Client(account_sid, auth_token)
 
 message = client.messages \
     .create(
          body='',
-         from_='+12059227403',
+         from_='from number',
          status_callback='http://postb.in/1234abcd',
-         to='+15166529203'
+         to='recipient'
      )
 
 print(message.sid)
